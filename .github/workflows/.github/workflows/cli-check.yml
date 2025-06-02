@@ -1,0 +1,14 @@
+name: Azure CLI Script Check
+
+on: [push]
+
+jobs:
+  lint-bash-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Lint the Automation Script
+        run: bash -n Automation-Vm.sh
